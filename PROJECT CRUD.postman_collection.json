@@ -1,0 +1,281 @@
+{
+	"info": {
+		"_postman_id": "648719be-2e65-4d08-838f-e3ce76d3e8dd",
+		"name": "PROJECT CRUD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14935498"
+	},
+	"item": [
+		{
+			"name": "profile/create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "Lumen",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"<?php echo 'ciao';?>Mario\",\n    \"cognome\": \"Rossi\",\n    \"telefono\": \"+39 340 123 4567\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}/profile/create",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"profile",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "profile/?/attributes/create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "Lumen",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"attribute\": \"<?php echo 'ciao';?>demooooooo\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}/profile/2/attributes/create",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"profile",
+						"2",
+						"attributes",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "profile/show",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/profile/show/1",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"profile",
+						"show",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "profile/?/attributes/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/profile/2/attributes/",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"profile",
+						"2",
+						"attributes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "profile/update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "Lumen",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"<?php echo 'ciao';?>Mario\",\n    \"cognome\": \"Rossi\",\n    \"telefono\": \"+39 555 555 555\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}/profile/update/1",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"profile",
+						"update",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "profile/?/attributes/update/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "Lumen",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"attribute\": \"Lorenzo, nuovo\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}/profile/2/attributes/update/1",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"profile",
+						"2",
+						"attributes",
+						"update",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "profile/delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "Lumen",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/profile/delete/1",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"profile",
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "profile/?/attributes/delete/1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "Lumen",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/profile/2/attributes/delete/1",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"profile",
+						"2",
+						"attributes",
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "profile/show/all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/show/all",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"show",
+						"all"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
